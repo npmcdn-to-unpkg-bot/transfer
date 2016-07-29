@@ -1,0 +1,61 @@
+.why-block{
+	padding-bottom: 17px;
+	&_h1{
+		padding-bottom: 15px;
+		margin-bottom: 18px;
+		font-size: 21px;
+		color: #3e67ae;
+		font-weight: bold;
+		border-bottom: 2px solid #3e67ae;
+		letter-spacing: -1.2px;
+		line-height: 1.15;
+	}
+	&_item{
+		display: block;
+		margin-bottom: 13px;
+		text-decoration: none;
+		@include link(#333232, #ec6e46);
+	}
+	&_h2{
+		font-weight: bold;
+		padding: 14px 0 23px 50px;
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			left: 1px;
+			top: 0;
+			width: 43px;
+			height: 43px;
+			background: url('../images/why-block-icons.png');
+		}
+		.why-block_item:nth-child(2) &{
+			&:before{
+				background-position: -43px 0;
+			}
+		}
+		.why-block_item:nth-child(3) &{
+			&:before{
+				background-position: -86px 0;
+			}
+		}
+		@include old-ie{
+    	.why-block_item:first-child + * &{
+    		&:before{
+					background-position: -43px 0;
+				}
+    	}
+    	.why-block_item:first-child + * + * &{
+    		&:before{
+					background-position: -86px 0;
+				}
+    	}
+    }
+	}
+	&_p{
+		letter-spacing: -0.4px;
+		font-size: 12px;
+		color: #737272;
+		line-height: 1.5;
+	}
+}

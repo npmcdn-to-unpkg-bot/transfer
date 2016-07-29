@@ -1,0 +1,27 @@
+.user-content{
+	a{
+		font-family: $italic;
+		@include link($lc, darken($lc, 10%));
+	}
+	h1{
+		font-family: $bold;
+		background-color: #70bb2a;
+		font-size: 25px;
+		color: #f7f7f7;
+	}
+	h2, h3, h4, h5{
+		font-family: $bold;
+		margin-top: 20px;
+		line-height: $lh;
+	}
+	p{
+		font-family: $font;
+	  font-size: $fsl;
+	  line-height: $lh;
+	}
+	ul{
+		li{
+			line-height: $lh;
+		}
+	}
+}
