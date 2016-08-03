@@ -4,11 +4,14 @@
   }
 }
 //*********************************************************************************/
-@mixin m1024 {
+@mixin m980 {
   // @if not $old-ie {
   //  @media screen and (min-width: 800px) { @content; }
   // }
-  @media all and (max-width: 1023px) { @content; }
+  @media all and (max-width: 980px) { @content; }
+}
+@mixin m480 {
+  @media all and (max-width: 480px) { @content; }
 }
 //*********************************************************************************/
 @mixin placeholder($color, $opacity:1){
@@ -42,8 +45,8 @@
   color:$normal;
     &:link{color:$normal;};
     &:visited{color:$normal;};
-    &:hover{color:$hover;};
-    &:active{color:$hover;}; 
+    &:active{color:$normal;};
+    &:hover{color:$hover;}; 
     //&:focus{color:$normal;}; 
 }
 //*********************************************************************************/

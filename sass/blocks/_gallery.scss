@@ -1,0 +1,41 @@
+.gallery{
+	box-shadow: 0px 5px 29px 0px rgba(0,0,0,0.58);
+	margin-bottom: 73px;
+	@include m480{
+		display: none;
+	}
+	&_title{
+		background-color: #70bb2a;
+		width: 48.8%;
+		text-align: center;
+		font-size: 25px;
+		color: #f7f7f7;
+		font-family: $bold;
+		padding: 19px 0 21px;
+		margin-bottom: 59px;
+	}
+	ul{
+		padding: 0;
+		li{
+			position: static;
+			margin: 0;
+			&:before{
+				display: none;
+			}	
+		}
+	}
+	.lSSlideOuter{
+		margin-bottom: 32px;
+	}
+	&_link{
+		display: inline-block;
+		border: 1px solid #999999;
+		overflow: hidden;
+		border-radius: 10px;
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+}

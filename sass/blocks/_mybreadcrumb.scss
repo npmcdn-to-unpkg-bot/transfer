@@ -1,0 +1,80 @@
+.mybreadcrumb{
+	letter-spacing: 0.4px;
+	margin: 0 0 60px 2px;
+	@include m980{
+		margin: 0 0 30px 2px;
+	}
+	&_link{
+		@include link($lc, darken($lc, 10%));
+		position: relative;
+		font-size: $fsl;
+		margin: 0 0 0 39px;
+		&:before{
+			content: ">";
+			color: #4f4f4f;
+			font-size: $fsl;
+			position: absolute;
+			top: 3px;
+			left: -26px;
+		}
+		@include old-ie{
+			*zoom: expression(
+			this.runtimeStyle.zoom="1",
+			this.appendChild( document.createElement("small") ).className="breadcrumb_before"
+			);
+			*+html &{
+				margin-right: 15px;
+			}
+			.breadcrumb_before{
+				background: url("../images/bread.png")no-repeat #fff;
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				top: 3px;
+				left: -26px;
+			}
+		}
+		&:first-child {
+			margin: 0 0 0 0;
+		}
+		&:first-child:before {
+			display: none; 
+		}
+		@include old-ie{
+			&:first-child .breadcrumb_before {
+				display: none;
+			}
+		}
+	}
+ &_item{
+   color: #4f4f4f;
+   position: relative;
+   font-size: $fsl;
+   margin: 0 0 0 39px;
+   &:before{
+      content: ">";
+			color: #4f4f4f;
+			font-size: $fsl;
+			position: absolute;
+			top: 3px;
+			left: -26px;
+    }
+    @include old-ie{
+      *zoom: expression(
+        this.runtimeStyle.zoom="1",
+        this.appendChild( document.createElement("small") ).className="breadcrumb_before"
+      );
+      *+html &{
+        margin-right: 15px;
+      }
+      .breadcrumb_before{
+        background: url("../images/bread.png")no-repeat #fff;
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				top: 3px;
+				left: -26px;
+      }
+    }
+ }
+}

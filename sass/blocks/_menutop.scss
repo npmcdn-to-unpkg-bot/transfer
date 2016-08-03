@@ -1,0 +1,100 @@
+.menutop{
+	margin-top: 56px;
+	@include m980{
+		margin-top: 20px;
+	}
+	@include m480{
+		margin-top: 0;
+	}
+	&_circle{
+		margin-left: 60px;
+		width: 88px;
+		height: 88px;
+		background-color: #f2f2f2;
+		border-radius: 50%;
+		padding-top: 12px;
+		border: 1px solid #f2f2f2;
+		&:hover{
+			background-color: #70bb2a;
+			border-color: #b9b9b9;
+		}
+		@include m980{
+			position: fixed;
+			right: 10px;
+			top: 10px;
+			z-index: 1;
+		}
+	}
+	&_switch{
+		width: 62px;
+		height: 62px;
+		margin: 0 auto;
+		display: block;
+		border: 1px solid #b9b9b9;
+		border-radius: 50%;
+		cursor: pointer;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		background: url('../images/menutop-switch.png') no-repeat 50% 50% #fff;
+		transition: transform 0.2s;
+		.menutop_circle:hover &{
+			//transform: rotate(180deg);
+		}
+	}
+	&_inner{
+		position: fixed;
+		left: -100%;
+		top: 0;
+		z-index: 1;
+		width: 350px;
+		padding-bottom: 18px;
+		background-color: #fff;
+		box-shadow: 0px 5px 29px 0px rgba(0,0,0,0.58);
+		transition: left, 0.2s;
+		//display: none;
+		@include m480{
+			width: 80%;
+		}
+		&__on{
+			display: block;
+			left: 0;
+		}
+
+	}
+	&_logo{
+		display: block;
+		width: 161px;
+		margin: 30px 0 10px 37px;
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	&_item{
+
+	}
+	&_link{
+		font-family: $regular;
+		@include link($fc, #fff);
+		text-decoration: none;
+		display: block;
+		padding: 22px 0 19px 33px;
+		&:hover{
+			background-color: #70bb2a;
+		}
+	}
+	&_close{
+		position: absolute;
+		right: 13px;
+		top: 13px;
+		width: 17px;
+		height: 17px;
+		background:transparent url('../images/menutop-close.png') left top no-repeat;
+		cursor: pointer;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.footer{
+	overflow: hidden;
+	&_left{
+		float: left;
+		width: 50%;
+		@include m980{
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
+	}
+	&_right{
+		float: left;
+		width: 50%;
+		@include m980{
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

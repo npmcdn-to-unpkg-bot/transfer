@@ -1,0 +1,48 @@
+.adv{
+	margin-bottom: 45px;
+	@include clearfix;
+	text-align: center;
+	overflow: hidden;
+	.front &{
+		border-bottom: 1px solid #d6d6d6;
+		padding-bottom: 22px;
+	}
+	@include m980{
+    margin-bottom: 0;
+    .front &{
+			margin-bottom: 15px;
+		}
+  }
+	&_list{
+		margin: 0 -87px;
+		@include m980{
+			margin: 0;
+		}
+	}
+	&_image{
+		border: 1px solid #70bb2a;
+		width: 137px;
+		margin: 0 auto;
+		border-radius: 50%;
+	}
+	&_item{
+		float: left;
+		width: 33.33%;
+		height: 270px;
+		@include m480{
+			float: none;
+			width: 100%;
+			max-width: 300px;
+			margin: 0 auto 15px auto;
+			height: auto;
+		}
+	}
+	&_name{
+		display: inline-block;
+		padding: 26px 85px 0px;
+		line-height: 1.45;
+		@include m980{
+			padding: 10px 10px 0;
+		}
+	}
+}

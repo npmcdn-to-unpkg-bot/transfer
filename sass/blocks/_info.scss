@@ -1,0 +1,130 @@
+.info{
+	margin: 33px 0 47px 20px;
+	position: relative;
+	@include m980{
+		margin: 0 0 15px 15px;
+	}
+	&_phones{
+		position: relative;
+		border-left: 1px solid #d1d1d1;
+		padding-left: 26px;
+		@include m980{
+			padding-bottom: 15px;
+		}
+		@include m480{
+			padding-left: 15px;
+		}
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0px;
+			left: -19px;
+			width: 38px;
+			height: 38px;
+			background: #fff url('../images/icons.png') left top no-repeat;
+			border: 1px solid #d1d1d1;
+			border-radius: 50%;
+		}
+	}
+	p{
+		display: inline-block;
+		line-height: 38px;
+		margin-left: 24px;
+	}
+	&_fastcall{
+		background-color: #f7f7f7;
+		margin: 16px 0 16px 24px!important;
+		padding: 0 38px;
+		border-radius: 21px;
+		@include m980{
+			display: block!important;
+			margin: 16px auto 0 auto!important;
+			text-align: center;
+			padding: 0 10px;
+		}
+		em{
+			font-family: $italic;
+		}
+	}
+	&_bottom{
+		position: relative;
+		border-left: 1px solid #d1d1d1;
+		padding-left: 31px;
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0px;
+			left: -19px;
+			width: 38px;
+			height: 38px;
+			background: #fff url('../images/icons.png') right top no-repeat;
+			border: 1px solid #d1d1d1;
+			border-radius: 50%;
+		}
+	}
+	&_skype{
+		display: inline-block;
+		padding-right: 76px;
+		margin-right: 66px;
+		position: relative;
+		@include m980{
+			padding: 0 0 0 50px;
+			margin-right: 0;
+		}
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0px;
+			right: -20px;
+			width: 38px;
+			height: 38px;
+			background: #fff url('../images/icons.png') left bottom no-repeat;
+			border: 1px solid #d1d1d1;
+			border-radius: 50%;
+			@include m980{
+				right: auto;
+				left: 17px;
+			}
+		}
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: -100px;
+			width: 100px;
+			height: 1px;
+			background: #d1d1d1;
+			z-index: -1;
+			@include m980{
+				right: auto;
+				left: -10px;
+				width: 50px;
+			}
+		}
+	}
+	&_phone{
+		display: inline-block;
+		position: relative;
+		padding-left: 12px;
+		background-color: #fff;
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0px;
+			left: -20px;
+			width: 38px;
+			height: 38px;
+			background: #fff url('../images/icons.png') right bottom no-repeat;
+			border: 1px solid #d1d1d1;
+			border-radius: 50%;
+		}
+		@include m980{
+			display: none;
+		}
+	}
+}

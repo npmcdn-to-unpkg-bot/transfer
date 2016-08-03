@@ -1,0 +1,14 @@
+.logo{
+	display: block;
+	margin: 50px 0 0 0;
+	@include m980{
+		max-width: 255px;
+		margin: 0 auto;
+	}
+	img{
+		display: block;
+		width: 100%;
+		max-width: 255px;
+		height: auto;
+	}
+}

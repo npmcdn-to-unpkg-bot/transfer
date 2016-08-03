@@ -13,6 +13,11 @@ body{
   max-width: $maxWidth;
   padding: $innerPadings;
   margin: 0 auto;
+  @include clearfix;
+  //background-color: #ccc;
+  @include m480{
+    padding: $innerPadings2;
+  }
 }
 a{
 

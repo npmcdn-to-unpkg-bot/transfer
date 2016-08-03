@@ -1,0 +1,26 @@
+.infofront{
+	background-color: #70bb2a;
+	text-align: center;
+	padding: 43px 70px 40px;
+	@include m980{
+		padding: 20px 35px 20px;
+	}
+	@include m480{
+		padding: 20px 15px 20px;
+	}
+	&_title{
+		font-family: $bolder;
+		color: #fff;
+		font-size: 43px;
+		margin-bottom: 33px;
+		@include m480{
+			font-size: 30px;
+			margin-bottom: 15px;
+		}
+	}
+	p{
+		font-family: $regular;
+		color: #fff;
+		line-height: 1.65;
+	}
+}
