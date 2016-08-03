@@ -1,0 +1,73 @@
+.news{
+	margin-bottom: 70px;
+	&_item{
+		@include clearfix;
+		box-shadow: 0px 5px 29px 0px rgba(0,0,0,0.58);
+		margin-bottom: 53px;
+		padding: 48px 0 52px 0;
+		position: relative;
+	}
+	&_left{
+		float: left;
+		width: 220px;
+		padding-top: 4px;
+		@include m480{
+			float: none;
+			margin-bottom: 20px;
+		}	
+	}
+	&_right{
+		overflow: hidden;
+		@include m980{
+			overflow: visible;
+		}
+	}
+	&_link{
+		display: block;
+		text-align: center;
+		font-size: $fsm;
+		@include m480{
+			text-align: left;
+		}
+		span{
+			@include m480{
+				display: inline-block;
+				padding-left: 15px;
+			}
+		}
+		img{
+			display: block;
+			max-width: 160px;
+			margin: 0 auto 15px auto;
+			@include m480{
+				margin: 0 0 15px 15px; 
+			}
+		}
+	}
+	&_name{
+		font-family: $bolder;
+		margin-bottom: 20px;
+		@include m480{
+			padding-left: 15px; 
+		}
+	}
+	&_date{
+		color: #e10303;
+		font-family: $italic;
+		margin-bottom: 16px;
+		@include m480{
+			padding-left: 15px; 
+		}
+	}
+	&_text{
+		padding: 0 20px 39px 0;
+		@include m980{
+			padding: 0 15px 45px 15px;
+		}
+	}
+	&_more{
+		position: absolute;
+		right: 32px;
+		bottom: 52px;
+	}
+}

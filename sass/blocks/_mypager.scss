@@ -1,0 +1,91 @@
+.mypager{
+	padding: 4px 30px 0;
+	@include clearfix;
+	@include m480{
+		padding: 4px 10px 0;
+	}
+	ul{
+		padding: 0;
+		li{
+			position: static;
+			margin: 0;
+			&:before{
+				display: none;
+			}	
+		}
+	}
+	&_list{
+		@include clearfix;
+		float: right;
+	}
+	&_item{
+		float: left;
+		font-size: 16px;
+		width: 31px;
+		height: 31px;
+		border: 1px solid #70bb2a;
+		border-radius: 50%;
+		margin-left: 12px!important;
+		@include m480{
+			margin-bottom: 5px!important;
+		}
+		&__current{
+			text-align: center;
+			color: #fbfbfb;
+			background-color: #bfbfbf;
+			border: 1px solid #bfbfbf;
+		}
+		&:hover{
+			background-color: #bfbfbf;
+			border: 1px solid #bfbfbf;
+		}
+		a{
+			display: block;
+			width: 31px;
+			height: 31px;
+			text-align: center;
+			font-family: $regular;
+			font-size: 16px;
+			text-decoration: none;
+			@include link(#70bb2a, #fff);
+		}
+		&.mypager-prev{
+			a{
+				font-family: $font;
+				font-size: 22px;
+				position: relative;
+				top: -3px;
+			}
+		}
+		&.mypager-next{
+			a{
+				font-family: $font;
+				font-size: 22px;
+				position: relative;
+				top: -3px;
+			}
+		}
+		&.mypager-start{
+			margin-right: 22px!important;
+			width: 104px;
+			border-radius: 31px;
+			@include m480{
+				margin-right: 0px!important;
+			}
+			a{
+				width: auto;
+			}
+		}
+		&.mypager-end{
+			margin-left: 34px!important;
+			width: 104px;
+			border-radius: 31px;
+			@include m480{
+				margin-left: 12px!important;
+			}
+			a{
+				width: auto;
+			}
+		}
+	}
+}

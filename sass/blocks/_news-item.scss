@@ -1,0 +1,21 @@
+.news-item{
+	border-bottom: 1px solid #dfdfdf;
+	padding: 0 0 75px;
+	margin: 0 0 69px;
+	&_image{
+		box-shadow: 0px 5px 29px 0px rgba(0,0,0,0.58);
+		margin-bottom: 43px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&_date{
+		font-family: $italic;
+		color: #e10303;
+		margin-bottom: 17px;
+	}
+	&_text{
+		margin-bottom: 48px;
+	}
+}
