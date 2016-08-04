@@ -41,7 +41,7 @@ input{
 button, input[type="reset"], input[type="button"], input[type="submit"] {
   box-shadow: none;
 }
-a, input, textarea{
+a, input, textarea, select, button, div{
   &:focus{
     outline: none;
   }

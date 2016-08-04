@@ -53,7 +53,9 @@ $(document).ready(function(){
       galleryMargin: 40
     });
   };
-
+  $("select").dropdown({
+    cover: true
+  });
 
   /************************************************************************/
   if($("#gmap").length>0 && !mobile2) {

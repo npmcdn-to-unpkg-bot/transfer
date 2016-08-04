@@ -1,3 +1,188 @@
 .select{
-	height: 1600px;
+	max-width: 1170px;
+	margin: 0 auto;
+	&_title{
+		background-color: #70bb2a;
+		font-family: $bold;
+		font-size: 25px;
+		color: #f7f7f7;
+		text-align: center;
+		max-width: 48.5%;
+		padding: 20px 0 20px;
+		margin-bottom: 60px;
+		@include m980{
+			max-width: none;
+		}
+	}
+	&_buttons{
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 72px;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 16px;
+			left: 10%;
+			right: 10%;
+			display: block;
+			z-index: 1;
+			height: 1px;
+			background-color: #d6d6d6;
+			@include m980{
+				left: 17%;
+				right: 17%;
+			}
+		}
+	}
+	&_wrap{
+		@include clearfix;
+		margin: 0 -95px 0 -125px;
+		@include m980{
+			margin: 0;
+		}
+	}
+	&_button{
+		//display: inline-block;
+		float: left;
+		width: 33.33%;
+		position: relative;
+		cursor: pointer;
+		padding-top: 63px;
+		font-family: $regular;
+		&:before{
+			content: '';
+			display:inline-block;
+	    width:25px;
+	    height:25px;
+	    background-color: #F7F7F7;
+	    border: 5px solid #70bb2a;
+	    border-radius: 50%;
+	    position: absolute;
+	    z-index: 1;
+	    left: 50%;
+	    top: 0;
+	    margin-left: -13px;
+		}
+		&:hover{
+			&:after{
+				content: '';
+				display:inline-block;
+		    width:19px;
+		    height:19px;
+		    background-color: #d6d6d6;
+		    border-radius: 50%;
+		    position: absolute;
+		    z-index: 1;
+		    left: 50%;
+		    top: 8px;
+		    margin-left: -5px;
+			}
+		}
+	}
+	&_tab{
+		@include clearfix;
+	}
+	&_inner{
+		padding-bottom: 26px;
+		box-shadow: 0px 5px 29px 0px rgba(0,0,0,0.58);
+		margin-bottom: 67px;
+		background-color: #f7f7f7;
+	}
+	&_item{
+		float: left;
+		@include clearfix;
+		margin-right: 35px;
+		margin-bottom: 39px;
+		@include m980{
+			float: none;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		@include m480{
+			margin-right: 0px;
+			text-align: left;
+		}
+		.fs-dropdown{
+			float: left;
+			@include m980{
+				float: none;
+				display: inline-block;
+			}
+			@include m480{
+				display: block;
+			}
+		}
+	}
+	&_label{
+		font-family: $regular;
+		float: left;
+		padding: 12px 0 0 0;
+		width: 80px;
+		text-align: center;
+		margin-right: 14px;
+		@include m980{
+			text-align: left;
+			float: none;
+			display: inline-block;
+			padding: 0;
+			height: 30px;
+			vertical-align: middle;
+			//position: relative;
+			//line-height: 50px;
+		}
+		@include m480{
+			height: 15px;
+			display: block;
+			padding: 0;
+			margin-bottom: 10px;
+		}
+	}
+	input[type="checkbox"] {
+    display:none;
+	}
+	input[type="checkbox"] + label {
+		cursor:pointer;
+		font-family: $regular;
+		color: #585858;
+		font-size: 18px;
+		padding: 0 0 0 39px;
+		position: relative;
+		top: 11px;
+		margin-left: 17px;
+		@include m980{
+			display: inline-block;
+			margin: 0 0 25px 15px;
+		}
+ 		&:before{
+			content: '';
+			display:inline-block;
+	    width:14px;
+	    height:14px;
+	    vertical-align:middle;
+	    border: 3px solid #70bb2a;
+	    border-radius: 50%;
+	    position: absolute;
+	    left: 0;
+	    top: 3px;
+	    @include m980{
+				top: 0;
+			}
+		}
+	}
+	input[type="checkbox"]:checked + label {
+		&:after{
+			content: '';
+			display:inline-block;
+	    width:10px;
+	    height:10px;
+	    vertical-align:middle;
+	    background-color: #d6d6d6;
+	    border-radius: 50%;
+	    position: absolute;
+	    left: 5px;
+	    top: 8px;
+	    //background:url('../images/checkbox.png') left top no-repeat;
+		} 
+	}
 }
