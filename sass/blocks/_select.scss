@@ -1,6 +1,16 @@
 .select{
 	max-width: 1170px;
 	margin: 0 auto;
+	&_loader{
+		position: absolute;
+	  z-index: 1;
+	  top: 8px;
+	  right: -40px;
+	  background: transparent url('../images/cube-mini.gif') no-repeat 0px 0px;
+    height: 30px;
+    width: 30px;
+    display: none;
+	}
 	&_title{
 		background-color: #70bb2a;
 		font-family: $bold;
@@ -64,7 +74,8 @@
 	    top: 0;
 	    margin-left: -13px;
 		}
-		&:hover{
+		&:hover,
+		&__active{
 			&:after{
 				content: '';
 				display:inline-block;
@@ -89,11 +100,50 @@
 		margin-bottom: 67px;
 		background-color: #f7f7f7;
 	}
+	&_submit{
+		input{
+			cursor: pointer;
+			display: inline-block;
+			border: none;
+			background-color: #70bb2a;
+			padding: 8px 45px;
+			@include link(#fff, $lc);
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: $bold;
+			box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
+			border-radius: 45px;
+			margin: 0 0 0 0;
+			font-size: 18px;
+			font-family: $bold;
+			&:hover{
+				background-color: #fff;
+			}
+			@include m980{
+				width: 255px;
+				margin: 0 0 0 77px;
+			}
+			@include m480{
+				width: 255px;
+				margin: 10px 0 0 0px;
+			}
+		}
+		@include m980{
+			margin: 10px 15px 0 0;
+		}
+	}
 	&_item{
 		float: left;
 		@include clearfix;
-		margin-right: 35px;
+		margin-right: 24px;
 		margin-bottom: 39px;
+		height: 44px;
+		position: relative;
+		&__submit{
+			margin-right: 0;
+			width: 100%;
+			text-align: center;
+		}
 		@include m980{
 			float: none;
 			text-align: center;
@@ -102,6 +152,7 @@
 		@include m480{
 			margin-right: 0px;
 			text-align: left;
+			height: 65px;
 		}
 		.fs-dropdown{
 			float: left;
@@ -113,6 +164,59 @@
 				display: block;
 			}
 		}
+		.time_pick{
+			//float: left;
+			cursor: pointer;
+			@include m980{
+				float: none;
+				display: inline-block;
+			}
+			@include m480{
+				display: block;
+			}
+		}
+		.timepicker-inner{
+			position: relative;
+			cursor: pointer;
+			float: left;
+			&:after {
+		    height: 17px;
+		    width: 17px;
+		    position: absolute;
+		    top: 14px;
+		    left: 210px;
+		    content: '';
+		    display: block;
+		    background:transparent url('../images/select.png') left top no-repeat;
+			}
+			@include m980{
+				float: none;
+				display: inline-block;
+			}
+		}
+		.timepicker{
+			width: 255px;
+			height: 44px;
+			border: 1px solid #70bb2a;
+			border-radius: 20px;
+	    font-family: $italic;
+	    color: #585858;
+	    font-size: 18px;
+	    line-height: 40px;
+	    text-align: center;
+	    padding: 0 40px 0 25px;
+	    cursor: pointer;
+		}
+		&__time1{
+			display: none;
+		}
+		&__time2{
+			display: none;
+		}
+	}
+	&_time{
+		float: left;
+		width: 200px;
 	}
 	&_label{
 		font-family: $regular;
@@ -182,7 +286,9 @@
 	    position: absolute;
 	    left: 5px;
 	    top: 8px;
-	    //background:url('../images/checkbox.png') left top no-repeat;
+	    @include m980{
+				top: 5px;
+			}
 		} 
 	}
 }

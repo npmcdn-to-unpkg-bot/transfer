@@ -53,13 +53,8 @@ $(document).ready(function(){
       galleryMargin: 40
     });
   };
-  if ($('#select_city').length > 0){
-    $("#select_city").dropdown({
-      cover: true
-    });
-  }
-  if ($('#select_fist').length > 0){
-    $("#select_fist").dropdown({
+  if ($('select').length > 0){
+    $("select").dropdown({
       cover: true
     });
   }

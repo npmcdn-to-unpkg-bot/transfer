@@ -21,21 +21,23 @@
 			margin: 0;
 			&:before{
 				display: none;
-			}	
+			}
+		}
+	}
+	&_item{
+		a{
+			display: inline-block;
+			border: 1px solid #999999;
+			overflow: hidden;
+			border-radius: 10px;
+			img{
+				display: block;
+				width: 100%;
+				height: auto;
+			}
 		}
 	}
 	.lSSlideOuter{
 		margin-bottom: 32px;
-	}
-	&_link{
-		display: inline-block;
-		border: 1px solid #999999;
-		overflow: hidden;
-		border-radius: 10px;
-		img{
-			display: block;
-			width: 100%;
-			height: auto;
-		}
 	}
 }

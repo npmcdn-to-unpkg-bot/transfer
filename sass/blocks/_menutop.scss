@@ -22,7 +22,7 @@
 			position: fixed;
 			right: 10px;
 			top: 10px;
-			z-index: 1;
+			z-index: 2;
 		}
 	}
 	&_switch{
@@ -46,7 +46,7 @@
 		position: fixed;
 		left: -100%;
 		top: 0;
-		z-index: 1;
+		z-index: 3;
 		width: 350px;
 		padding-bottom: 18px;
 		background-color: #fff;

@@ -4,10 +4,27 @@
 	@include m980{
 		margin: 0 0 15px 15px;
 	}
+	.fixed &{
+		overflow: hidden;
+		margin: 0;
+		padding-left: 108px;
+		margin: 32px 0 40px 0;
+		@include m1170{
+			margin: 15px 0 20px 0;
+		}
+	}
 	&_phones{
 		position: relative;
 		border-left: 1px solid #d1d1d1;
 		padding-left: 26px;
+		.fixed &{
+			border: none;
+			margin-bottom: 26px;
+			@include m1170{
+				//text-align: center;
+				margin-bottom: 15px;
+			}
+		}
 		@include m980{
 			padding-bottom: 15px;
 		}
@@ -31,21 +48,41 @@
 		display: inline-block;
 		line-height: 38px;
 		margin-left: 24px;
+		.fixed &{
+			margin: 0 0 0 22px;
+			@include m1170{
+				font-size: 15px;
+				margin-left: 15px;
+			}
+		}
 	}
 	&_fastcall{
-		background-color: #f7f7f7;
-		margin: 16px 0 16px 24px!important;
-		padding: 0 38px;
-		border-radius: 21px;
+		display: inline-block;
+
 		@include m980{
-			display: block!important;
-			margin: 16px auto 0 auto!important;
-			text-align: center;
-			padding: 0 10px;
+			display: block;
 		}
-		em{
-			font-family: $italic;
+		p{
+			background-color: #f7f7f7;
+			margin: 16px 0 16px 24px!important;
+			padding: 0 38px;
+			border-radius: 21px;
+			.fixed &{
+				margin: 0 0 0 22px!important;
+				padding: 0;
+				background-color: inherit;
+			}
+			@include m980{
+				display: block!important;
+				margin: 16px auto 0 auto!important;
+				text-align: center;
+				padding: 0 10px;
+			}
+			em{
+				font-family: $italic;
+			}
 		}
+		
 	}
 	&_bottom{
 		position: relative;

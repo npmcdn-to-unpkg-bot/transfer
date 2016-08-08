@@ -1,0 +1,58 @@
+.fixed{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 2;
+	@include clearfix;
+	box-shadow: 0px 5px 29px 0px rgba(0,0,0,0.58);
+	&__on{
+		display: block;
+		@include m980{
+			display: none;
+		}
+	}
+	&_circle{
+		//margin-left: 60px;
+		margin-top: 44px;
+		float: left;
+		width: 88px;
+		height: 88px;
+		background-color: #f2f2f2;
+		border-radius: 50%;
+		padding-top: 12px;
+		border: 1px solid #f2f2f2;
+		@include m1170{
+			margin-top: 17px;
+		}
+		&:hover{
+			background-color: #70bb2a;
+			border-color: #b9b9b9;
+		}
+		/*@include m980{
+			position: fixed;
+			right: 10px;
+			top: 10px;
+			z-index: 2;
+		}*/
+	}
+	&_switch{
+		width: 62px;
+		height: 62px;
+		margin: 0 auto;
+		display: block;
+		border: 1px solid #b9b9b9;
+		border-radius: 50%;
+		cursor: pointer;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		background: url('../images/menutop-switch.png') no-repeat 50% 50% #fff;
+		transition: transform 0.2s;
+		.menutop_circle:hover &{
+			//transform: rotate(180deg);
+		}
+	}
+}
