@@ -1,0 +1,73 @@
+.form-popup{
+	background-color: #fff;
+	border-radius: 20px;
+	overflow: hidden;
+	width: 100%;
+	max-width: 540px;
+	//height: 830px;
+	padding: 45px 64px 28px;
+	&_title{
+		font-family: $bold;
+		color: #4d4c4d;
+		font-size: 25px;
+		text-align: center;
+		margin-bottom: 42px;
+	}
+	&_inner{
+		margin-bottom: 28px;
+		input{
+			border: 1px solid #70bb2a;
+	    border-radius: 20px;
+	    color: #585858;
+	    font-family: "italic";
+	    font-size: 18px;
+	    height: 44px;
+	    line-height: 40px;
+	    padding: 0 32px 0 32px;
+	    width: 100%;
+		}
+		textarea{
+			border: 1px solid #70bb2a;
+	    border-radius: 20px;
+	    color: #585858;
+	    font-family: "italic";
+	    font-size: 18px;
+	    height: 153px;
+	    line-height: 18px;
+	    padding: 15px 32px 15px 32px;
+	    width: 100%;
+		}
+	}
+	&_button{
+		padding-top: 13px;
+		margin-bottom: 35px;
+		input.webform-submit{
+			cursor: pointer;
+			display: block;
+			margin: 0 auto;
+			width: 290px;
+			text-align: center;
+			border: none;
+			background-color: #70bb2a;
+			padding: 8px 45px;
+			@include link(#fff, $lc);
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: $bold;
+			box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
+			border-radius: 45px;
+			font-size: 18px;
+			font-family: $bold;
+			&:hover{
+				background-color: #fff;
+			}
+		}
+	}
+	&_descr{
+		font-size: 16px;
+		text-align: center;
+		color: #585858;
+		padding: 0 15px;
+		line-height: 1.8;
+	}
+}

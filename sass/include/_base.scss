@@ -50,34 +50,34 @@ pre{
   word-wrap: break-word;
 }
 ::-webkit-input-placeholder {
-  font-family: $font;
-  /*color: #434242;
-  font-size: 20px;*/
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
 }
 :-moz-placeholder {
-  font-family: $font;
-  /*color: #434242;
-  font-size: 20px;*/
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
 }
 ::-moz-placeholder {
-  font-family: $font;
-  /*color: #434242;
-  font-size: 20px;*/
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
 }
 :-ms-input-placeholder {
-  font-family: $font;
-  /*color: #434242;
-  font-size: 20px;*/
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
 }
 ::-ms-input-placeholder {
-  font-family: $font;
-  /*color: #434242;
-  font-size: 20px;*/
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
 }
 :placeholder-shown {
-  font-family: $font;
-  /*color: #434242;
-  font-size: 20px;*/
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
 }
 .hide{
   display: none;

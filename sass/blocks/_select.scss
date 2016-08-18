@@ -1,6 +1,13 @@
 .select{
 	max-width: 1170px;
 	margin: 0 auto;
+	&_view{
+		&__loading{
+			height: 200px;
+			background: url('../images/cube.gif') 50% 50% no-repeat;
+			margin-bottom: 67px;
+		}
+	}
 	&_loader{
 		position: absolute;
 	  z-index: 1;
@@ -44,6 +51,12 @@
 				right: 17%;
 			}
 		}
+		@include m980{
+			margin-bottom: 35px;
+		}
+		@include m480{
+			margin-bottom: 15px;
+		}
 	}
 	&_wrap{
 		@include clearfix;
@@ -53,7 +66,6 @@
 		}
 	}
 	&_button{
-		//display: inline-block;
 		float: left;
 		width: 33.33%;
 		position: relative;
@@ -101,6 +113,7 @@
 		background-color: #f7f7f7;
 	}
 	&_submit{
+		text-align: center;
 		input{
 			cursor: pointer;
 			display: inline-block;
@@ -121,15 +134,18 @@
 			}
 			@include m980{
 				width: 255px;
-				margin: 0 0 0 77px;
-			}
-			@include m480{
-				width: 255px;
-				margin: 10px 0 0 0px;
 			}
 		}
-		@include m980{
-			margin: 10px 15px 0 0;
+	}
+	&_row{
+		@include clearfix;
+		&__time{
+			display: none;
+		}
+		&__submit{
+			@include m980{
+				padding-top: 10px;
+			}
 		}
 	}
 	&_item{
@@ -139,20 +155,14 @@
 		margin-bottom: 39px;
 		height: 44px;
 		position: relative;
-		&__submit{
-			margin-right: 0;
-			width: 100%;
-			text-align: center;
-		}
 		@include m980{
+			margin: 0 0 10px;
 			float: none;
 			text-align: center;
-			margin-bottom: 10px;
+			height: auto;
 		}
-		@include m480{
-			margin-right: 0px;
-			text-align: left;
-			height: 65px;
+		&__san{
+			display: none;
 		}
 		.fs-dropdown{
 			float: left;
@@ -160,12 +170,8 @@
 				float: none;
 				display: inline-block;
 			}
-			@include m480{
-				display: block;
-			}
 		}
 		.time_pick{
-			//float: left;
 			cursor: pointer;
 			@include m980{
 				float: none;
@@ -207,12 +213,6 @@
 	    padding: 0 40px 0 25px;
 	    cursor: pointer;
 		}
-		&__time1{
-			display: none;
-		}
-		&__time2{
-			display: none;
-		}
 	}
 	&_time{
 		float: left;
@@ -226,20 +226,11 @@
 		text-align: center;
 		margin-right: 14px;
 		@include m980{
-			text-align: left;
+			margin: 0;
+			padding: 0 0 10px 0;
+			width: 100%;
 			float: none;
-			display: inline-block;
-			padding: 0;
-			height: 30px;
-			vertical-align: middle;
-			//position: relative;
-			//line-height: 50px;
-		}
-		@include m480{
-			height: 15px;
 			display: block;
-			padding: 0;
-			margin-bottom: 10px;
 		}
 	}
 	input[type="checkbox"] {
