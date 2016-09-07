@@ -2752,7 +2752,8 @@ pre {
 #cboxLoadedContent {
   background: transparent;
   padding: 1px;
-  /*border-radius: 20px;*/ }
+  -webkit-border-radius: 20px;
+  border-radius: 20px; }
 
 #cboxLoadingOverlay {
   /*background:transparent;*/
@@ -6651,6 +6652,8 @@ a.reset_time {
   width: 100%;
   max-width: 540px;
   padding: 45px 64px 28px; }
+  .form-popup .messages {
+    display: none; }
   .form-popup_title {
     font-family: "medium";
     color: #4d4c4d;
@@ -6670,6 +6673,8 @@ a.reset_time {
       line-height: 40px;
       padding: 0 32px 0 32px;
       width: 100%; }
+    .form-popup_inner input.error {
+      border-color: #ff0000; }
     .form-popup_inner textarea {
       border: 1px solid #70bb2a;
       -webkit-border-radius: 20px;
@@ -6681,9 +6686,12 @@ a.reset_time {
       line-height: 18px;
       padding: 15px 32px 15px 32px;
       width: 100%; }
+      .form-popup_inner textarea .error {
+        border-color: #00ffff; }
   .form-popup_button {
     padding-top: 13px;
-    margin-bottom: 35px; }
+    margin-bottom: 35px;
+    position: relative; }
     .form-popup_button input.webform-submit {
       cursor: pointer;
       display: block;
@@ -6713,6 +6721,18 @@ a.reset_time {
         color: #70bb2a; }
       .form-popup_button input.webform-submit:hover {
         background-color: #fff; }
+    .form-popup_button .ajax-progress {
+      position: absolute;
+      z-index: 1;
+      bottom: 8px;
+      left: auto;
+      right: 0; }
+      .form-popup_button .ajax-progress .throbber {
+        background: transparent url("../images/cube-mini.gif") no-repeat 0px 0px;
+        display: block;
+        height: 30px;
+        width: 30px;
+        margin: 0px; }
   .form-popup_descr {
     font-size: 16px;
     text-align: center;

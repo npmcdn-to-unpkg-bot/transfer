@@ -6,6 +6,9 @@
 	max-width: 540px;
 	//height: 830px;
 	padding: 45px 64px 28px;
+	.messages{
+		display: none;
+	}
 	&_title{
 		font-family: $bold;
 		color: #4d4c4d;
@@ -26,6 +29,9 @@
 	    padding: 0 32px 0 32px;
 	    width: 100%;
 		}
+		input.error{
+    	border-color: #ff0000;
+    }
 		textarea{
 			border: 1px solid #70bb2a;
 	    border-radius: 20px;
@@ -36,11 +42,15 @@
 	    line-height: 18px;
 	    padding: 15px 32px 15px 32px;
 	    width: 100%;
+	    .error{
+	    	border-color: #00ffff;
+	    }
 		}
 	}
 	&_button{
 		padding-top: 13px;
 		margin-bottom: 35px;
+		position: relative;
 		input.webform-submit{
 			cursor: pointer;
 			display: block;
@@ -61,6 +71,20 @@
 			&:hover{
 				background-color: #fff;
 			}
+		}
+		.ajax-progress{
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 8px;
+		  left: auto;
+		  right: 0;
+		  .throbber {
+		    background: transparent url('../images/cube-mini.gif') no-repeat 0px 0px;
+		    display: block;
+		    height: 30px;
+		    width: 30px;
+		    margin: 0px;
+		  }
 		}
 	}
 	&_descr{
